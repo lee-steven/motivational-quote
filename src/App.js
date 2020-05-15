@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import './App.css';
 
 const App = () => {
   const [ quote, setQuote ] = useState(
@@ -23,9 +22,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Quote of the day</h1>
-      <h2>{quote.text}</h2>
-      <p>{quote.author}</p>
+      <span>Random</span> <h1>Motivational Quote</h1>
+      <h2> &#10077; {quote.text} &#10078;</h2>
+      <p>- {quote.author === '' ? "unknown" : quote.author}</p>
     </div>
   )
 }
